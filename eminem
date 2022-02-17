@@ -1,0 +1,20 @@
+import random
+
+def bilbobaggings(hoeveel):
+    zak = {
+        'groen': 0,
+        'blauw': 0,
+        'oranje': 0,
+        'bruin': 0,
+    }
+    kleuren = ['groen', 'blauw', 'oranje', 'bruin']
+    for i in range(hoeveel):
+        zak[random.choice(kleuren)]+=1
+
+    sortedDict = dict(sorted(zak.items(), key = lambda x: x[1]))
+    print(sortedDict)
+
+
+aantal = int(input("hoeveel eminem's wilt u?: "))
+
+print(bilbobaggings(aantal))
